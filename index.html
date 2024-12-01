@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <title>Assignment 9</title>
+  </head>
+  <body>
+    <main class="py-5 position-relative">
+      <h1 class="text-center">Bookmarker</h1>
+      <div class="book-body w-75 mx-auto">
+        <div class="inputs-continer">
+          <h2 class=" mx-auto">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites 
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <label for="SiteName" class="mb-3 fw-bold">
+            <i class="fa-solid fa-book"></i>
+            Site Name
+          </label>
+          <div class="input-continer" id="siteNameDiv">
+            <input class="form-control mb-3" type="text" id="SiteName" placeholder="Bookmark Name">
+          </div>
+          <label for="SiteURL" class="mb-3 fw-bold">
+            <i class="fa-solid fa-link"></i>
+            Site URL
+          </label>
+          <div class="input-continer" id="siteUrlDiv">
+            <input class="form-control mb-3" type="text" id="SiteURL" placeholder="Website URL">
+          </div>
+          <button class="btn btn-danger mx-auto d-block my-btn" id="Submit">Submit</button>
+        </div>
+      </div>
+      <table class="table w-75 mx-auto text-center">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+      <div class="error-msg d-none" id="errorMsg">
+        <div class="d-flex justify-content-between mb-3">
+          <div class="icons">
+        <span></span>
+        <span></span>
+        <span></span>
+          </div>
+          <i class="fa-solid fa-x fs-4" onclick="closeMsg()"></i>
+        </div>
+        <h3>Site Name or Url is not valid, Please follow the rules below :</h3> 
+        <ul>
+          <li><i class="fa-solid fa-arrow-right"></i>
+          Site name must contain at least 3 characters
+          </li>
+          <li><i class="fa-solid fa-arrow-right"></i>
+          Site URL must be a valid one ,
+        <span>  e.g (https://www.facebook.com)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="error-shadow d-none" id="errorShadow"></div>
+    </main>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
